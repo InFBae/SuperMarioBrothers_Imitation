@@ -26,9 +26,16 @@ public class BrickHit : MonoBehaviour
     {
         if (collision.gameObject.layer == SortingLayer.GetLayerValueFromName("ItemPlayer"))
         {
-
+            /*
+            if (collision.transform.DotTest(transform, Vector2.up))
+            {
+                Hit();
+            }
+            */
             Debug.Log("ÄôÇßÀ½");
             animator.SetTrigger("IsHit");
         }
+        
+
     }
 }
