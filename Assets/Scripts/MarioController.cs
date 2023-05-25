@@ -15,7 +15,7 @@ public class MarioController : MonoBehaviour
     private Animator animator;
     private Vector2 direction;
 
-    private bool isGround;
+    private int isGround;
 
     private void Awake()
     {
@@ -26,12 +26,14 @@ public class MarioController : MonoBehaviour
     private void Update()
     {
         Move();
-        animator.SetFloat("moveSpeed", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("moveSpeed",rb.velocity.x);
+        CheckIsGround();
     }
 
     private void OnMove(InputValue inputValue)
     {       
-        direction = inputValue.Get<Vector2>();        
+        direction = inputValue.Get<Vector2>();
+        animator.SetFloat("MoveDirection", direction.x);
         if (direction.x > 0)
         {
             render.flipX = false;
@@ -46,10 +48,6 @@ public class MarioController : MonoBehaviour
         }
         else animator.SetBool("Moving", false);
 
-        if((direction.x < 0 && rb.velocity.x > 0) || (direction.x > 0 && rb.velocity.x < 0))
-        {
-            animator.SetTrigger("DirectionChanged");
-        }
     }
 
     private void Move()
@@ -66,7 +64,7 @@ public class MarioController : MonoBehaviour
 
     private void OnJump(InputValue inputValue)
     {
-        if(isGround)
+        if(isGround > 0)
         {
             Jump();
         }        
@@ -78,14 +76,18 @@ public class MarioController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        animator.SetBool("OnGround", true);
-        isGround = true;
+    {       
+        isGround++;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
+    {       
+        isGround--;
+    }
+
+    private void CheckIsGround()
     {
-        animator.SetBool("OnGround", false);
-        isGround = false;
+        if (isGround > 0) { animator.SetBool("OnGround", true); }
+        else { animator.SetBool("OnGround", false); }
     }
 }
