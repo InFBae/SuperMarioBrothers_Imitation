@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MarioController : MonoBehaviour
+public class MarioMoveController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private float maxSpeed;
