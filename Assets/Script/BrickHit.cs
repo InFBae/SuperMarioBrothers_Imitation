@@ -13,13 +13,15 @@ public class BrickHit : MonoBehaviour
     private bool isHit;
     private int brickHp = 1;
     private Animator animator;
+    private Renderer render;
     [SerializeField] private GameObject brokenBrickPrebat;
-    [SerializeField] private GameObject mario;
+    [SerializeField] private Transform brokenPoint;
 
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        render = GetComponent<Renderer>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -27,23 +29,25 @@ public class BrickHit : MonoBehaviour
         if (collision.gameObject.layer == SortingLayer.GetLayerValueFromName("ItemPlayer"))
         {
             Debug.Log("ÄôÇßÀ½");
-
             switch (GameManager.Data.CurState)
             {
                 case (int)State.Small:
                     animator.SetTrigger("IsHit");
                     break;
                 case (int)State.Big:
-                    animator.SetTrigger("IsBroken");
-                    Destroy(gameObject, 0);
+                    Instantiate(brokenBrickPrebat, brokenPoint.position, brokenPoint.rotation);
+                    render.enabled = false;
+                    Destroy(gameObject, 1);
                     break;
                 case (int)State.Flower:
-                    animator.SetTrigger("IsBroken");
-                    Destroy(gameObject, 0);
+                    Instantiate(brokenBrickPrebat, brokenPoint.position, brokenPoint.rotation);
+                    render.enabled = false;
+                    Destroy(gameObject, 1);
                     break;
                 case (int)State.Starmen:
-                    animator.SetTrigger("IsBroken");
-                    Destroy(gameObject, 0);
+                    Instantiate(brokenBrickPrebat, brokenPoint.position, brokenPoint.rotation);
+                    render.enabled = false;
+                    Destroy(gameObject, 1);
                     break;
             }
             

@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 public class DataManager : MonoBehaviour
 {
     enum State { Small, Big, Flower, Starmen, Death }
+
     [SerializeField] private int curState;
     public event UnityAction<int> OnCurStateChanged;
 
