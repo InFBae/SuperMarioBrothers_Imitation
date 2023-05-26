@@ -5,7 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     protected enum State { Small, Big, Flower, Starmen, Death }
-    protected new Rigidbody2D rd;
+    protected Rigidbody2D rd;
     protected new Collider2D collider;
     protected Animator animator;
 
@@ -38,7 +38,7 @@ public class Item : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    protected virtual void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -48,7 +48,6 @@ public class Item : MonoBehaviour
         if (collision.gameObject.tag == "Object")
         {
             Trun();
-            Debug.Log("¹ö¼¸¹ö¼¸");
         }
     }
 }

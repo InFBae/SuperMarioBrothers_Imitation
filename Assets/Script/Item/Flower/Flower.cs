@@ -1,23 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.U2D.Path.GUIFramework;
 using UnityEngine;
 
-public class Mushroom : Item
+public class Flower : Item
 {
     protected override void Hit()
     {
         switch (GameManager.Data.CurState)
         {
             case (int)State.Small:
-                GameManager.Data.CurState = (int)State.Big;
+                GameManager.Data.CurState = (int)State.Flower;
                 Destroy(gameObject);
                 break;
             case (int)State.Big:
+                GameManager.Data.CurState = (int)State.Flower;
                 Destroy(gameObject);
                 break;
             case (int)State.Flower:
-                GameManager.Data.CurState = (int)State.Flower;
                 Destroy(gameObject);
                 break;
             case (int)State.Starmen:
@@ -26,5 +25,10 @@ public class Mushroom : Item
                 break;
         }
     }
+
+    private void Update()
+    {
+        // 애니메이션 재생
+    }
+
 }
-    

@@ -20,28 +20,28 @@ public class MysteryBrick : BrickHit
                     Instantiate(ItemPrebat, ItemTransPoint.position, ItemTransPoint.rotation);
                     //animator.SetTrigger("IsHit");
                     render.enabled = false;
-                    Destroy(gameObject, 1);
+                    Destroy(gameObject);
                     break;
                 case (int)State.Big:
                     Instantiate(BrickPrebat, BrickTransPoint.position, BrickTransPoint.rotation);
                     Instantiate(ItemPrebat, ItemTransPoint.position, ItemTransPoint.rotation);
                     //animator.SetTrigger("IsHit");
                     render.enabled = false;
-                    Destroy(gameObject, 1);
+                    Destroy(gameObject);
                     break;
                 case (int)State.Flower:
                     Instantiate(BrickPrebat, BrickTransPoint.position, BrickTransPoint.rotation);
                     Instantiate(ItemPrebat, ItemTransPoint.position, ItemTransPoint.rotation);
                     //animator.SetTrigger("IsHit");
                     render.enabled = false;
-                    Destroy(gameObject, 1);
+                    Destroy(gameObject);
                     break;
                 case (int)State.Starmen:
                     Instantiate(BrickPrebat, BrickTransPoint.position, BrickTransPoint.rotation);
                     Instantiate(ItemPrebat, ItemTransPoint.position, ItemTransPoint.rotation);
                     //animator.SetTrigger("IsHit");
                     render.enabled = false;
-                    Destroy(gameObject, 1);
+                    Destroy(gameObject);
                     break;
             }
 
