@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
     public const string DefaultName = "GameManager";
 
     private static GameManager instance;
