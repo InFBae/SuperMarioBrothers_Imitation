@@ -15,17 +15,17 @@ public class NomalBrick : BrickHit
                     animator.SetTrigger("IsHit");
                     break;
                 case (int)State.Big:
-                    Instantiate(BrickPrebat, transPoint.position, transPoint.rotation);
+                    Instantiate(BrickPrebat, BrickTransPoint.position, BrickTransPoint.rotation);
                     render.enabled = false;
                     Destroy(gameObject, 1);
                     break;
                 case (int)State.Flower:
-                    Instantiate(BrickPrebat, transPoint.position, transPoint.rotation);
+                    Instantiate(BrickPrebat, BrickTransPoint.position, BrickTransPoint.rotation);
                     render.enabled = false;
                     Destroy(gameObject, 1);
                     break;
                 case (int)State.Starmen:
-                    Instantiate(BrickPrebat, transPoint.position, transPoint.rotation);
+                    Instantiate(BrickPrebat, BrickTransPoint.position, BrickTransPoint.rotation);
                     render.enabled = false;
                     Destroy(gameObject, 1);
                     break;

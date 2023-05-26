@@ -7,21 +7,27 @@ public class Item : MonoBehaviour
     protected enum State { Small, Big, Flower, Starmen, Death }
     protected new Rigidbody2D rd;
     protected new Collider2D collider;
-    protected new Renderer render;
     protected Animator animator;
+
+    [SerializeField] private float moveSpeed;
     
 
     protected virtual void Awake()
     {
         rd = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
-        render = GetComponent<Renderer>();
         animator = GetComponent<Animator>();
     }
 
     protected virtual void Move()
     {
-        rd.AddForce(Vector2.right * 2f, ForceMode2D.Force);
+        rd.velocity = new Vector2(transform.right.x * moveSpeed, rd.velocity.y);
+        // rd.AddForce(Vector2.right * moveSpeed, ForceMode2D.Force);
+    }
+
+    protected virtual void Trun() 
+    {
+        moveSpeed = -moveSpeed;
     }
 
     protected virtual void Hit()
@@ -34,5 +40,11 @@ public class Item : MonoBehaviour
         {
             Hit();
         }
+        if (collision.gameObject.tag == "Object")
+        {
+            Trun();
+        }
     }
 }
+
+

@@ -12,8 +12,7 @@ public class BrickHit : MonoBehaviour
     // 블록 맞는 횟수 고려
 
     [SerializeField] protected GameObject BrickPrebat;
-    [SerializeField] protected GameObject ItemPrebat;
-    [SerializeField] protected Transform transPoint;
+    [SerializeField] protected Transform BrickTransPoint;
 
 
     protected virtual void Awake()

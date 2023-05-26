@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efac8a67f4e5fb942a5d68e7e24a1532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenBrickPrebat: {fileID: 8799636772797342386, guid: 985eee4bab8a5b943a1cfd2576a242bb, type: 3}
-  brokenPoint: {fileID: 8990235456308435431}
+  BrickPrebat: {fileID: 8799636772797342386, guid: 985eee4bab8a5b943a1cfd2576a242bb, type: 3}
+  BrickTransPoint: {fileID: 8990235456308435431}
 --- !u!95 &5237385585557222934
 Animator:
   serializedVersion: 5
