@@ -20,7 +20,12 @@ public class Coin : MonoBehaviour
 
     protected virtual void Hit()
     {
+
         // GameManager.Data.CurCoinScore ++;
+        //if (CurCoinScore = 100)
+        {
+            GameManager.Data.Life++;
+        }
         Destroy(gameObject);
     }
 
