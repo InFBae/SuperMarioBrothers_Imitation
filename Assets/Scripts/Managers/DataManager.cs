@@ -54,7 +54,7 @@ public class DataManager : MonoBehaviour
         get { return curCoin; }
         set
         {
-            Debug.Log("11");
+            Debug.Log("ÄÚÀÎÈ¹µæ");
             if (curCoin != value)
             {
                 OnCurCoinChanged?.Invoke(value);
@@ -62,6 +62,7 @@ public class DataManager : MonoBehaviour
             }
             if (curCoin >= 100)
             {
+                Debug.Log("¶óÀÌÇÁ¾÷!");
                 life++;
                 curCoin += -100;
             }

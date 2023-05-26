@@ -9,7 +9,7 @@ public class Item : MonoBehaviour
     protected new Collider2D collider;
     protected Animator animator;
 
-    [SerializeField] private float moveSpeed;
+    [SerializeField] protected new float moveSpeed;
     
 
     protected virtual void Awake()
