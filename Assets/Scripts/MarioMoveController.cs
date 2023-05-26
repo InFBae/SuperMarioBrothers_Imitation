@@ -15,7 +15,7 @@ public class MarioMoveController : MonoBehaviour
     private Animator animator;
     private Vector2 direction;
 
-    private int isGround;
+    public int isGround;
 
     private void Awake()
     {
@@ -73,16 +73,6 @@ public class MarioMoveController : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {       
-        isGround++;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {       
-        isGround--;
     }
 
     private void CheckIsGround()

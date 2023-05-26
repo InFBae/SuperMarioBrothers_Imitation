@@ -9,15 +9,11 @@ public class DataManager : MonoBehaviour
 {
     public enum State { Small, Big, Flower, Starmen, Death }
     [SerializeField] private int curState;
+    [SerializeField] private int life;
+
     public UnityEvent<int> OnCurStateChanged;
 
-    public GameObject player;
-
-
-    private void Awake()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-    }
+    public int Life { get { return life; } set { life = value; } }
 
     public int CurState
     {
@@ -31,19 +27,19 @@ public class DataManager : MonoBehaviour
                     OnCurStateChanged?.Invoke(curState);
                     break;
                 case (int)State.Big:
-                    curState = (int)State.Small;
+                    curState = (int)State.Big;
                     OnCurStateChanged?.Invoke(curState);
                     break;
                 case (int)State.Flower:
-                    curState = (int)State.Small;
+                    curState = (int)State.Flower;
                     OnCurStateChanged?.Invoke(curState);
                     break;
                 case (int)State.Starmen:
-                    curState = (int)State.Small;
+                    curState = (int)State.Starmen;
                     OnCurStateChanged?.Invoke(curState);
                     break;
                 case (int)State.Death:
-                    curState = (int)State.Small;
+                    curState = (int)State.Death;
                     OnCurStateChanged?.Invoke(curState);
                     break;
             }
