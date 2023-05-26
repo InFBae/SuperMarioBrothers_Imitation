@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flower : Item
+public class FireFlower : Item
 {
     protected override void Hit()
     {
@@ -30,5 +30,4 @@ public class Flower : Item
     {
         // 애니메이션 재생
     }
-
 }
