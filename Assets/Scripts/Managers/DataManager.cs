@@ -7,7 +7,9 @@ using UnityEngine.UIElements;
 
 public class DataManager : MonoBehaviour
 {
+
     public enum State { Small, Big, Flower, Starmen, Death }
+
     [SerializeField] private int curState;
     [SerializeField] private int life;
 

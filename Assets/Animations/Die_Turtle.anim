@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Broken
+  m_Name: Die_Turtle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 8799636772797342386, guid: 985eee4bab8a5b943a1cfd2576a242bb, type: 3}
-    - time: 1
-      value: {fileID: 8799636772797342386, guid: 985eee4bab8a5b943a1cfd2576a242bb, type: 3}
-    attribute: brokenBrickPrebat
+      value: {fileID: -1167651818, guid: d8c07239a17a04f4ca3bff99c9ae24db, type: 3}
+    attribute: m_Sprite
     path: 
-    classID: 114
-    script: {fileID: 11500000, guid: a3d5e29833ce7a346948b43469b13a9f, type: 3}
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -36,20 +34,19 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 0
-      attribute: 2301130040
-      script: {fileID: 11500000, guid: a3d5e29833ce7a346948b43469b13a9f, type: 3}
-      typeID: 114
-      customType: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 8799636772797342386, guid: 985eee4bab8a5b943a1cfd2576a242bb, type: 3}
-    - {fileID: 8799636772797342386, guid: 985eee4bab8a5b943a1cfd2576a242bb, type: 3}
+    - {fileID: -1167651818, guid: d8c07239a17a04f4ca3bff99c9ae24db, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.0166667
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
