@@ -19,10 +19,14 @@ public class Item : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        Move();
+    }
+
     protected virtual void Move()
     {
         rd.velocity = new Vector2(transform.right.x * moveSpeed, rd.velocity.y);
-        // rd.AddForce(Vector2.right * moveSpeed, ForceMode2D.Force);
     }
 
     protected virtual void Trun() 
@@ -39,10 +43,12 @@ public class Item : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Hit();
+
         }
         if (collision.gameObject.tag == "Object")
         {
             Trun();
+            Debug.Log("¹ö¼¸¹ö¼¸");
         }
     }
 }

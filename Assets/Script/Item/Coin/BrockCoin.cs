@@ -12,7 +12,7 @@ public class BrockCoin : MonoBehaviour
     protected virtual void Appear()
     {
         // GameManager.Data.CurCoinScore ++;
-        Destroy(gameObject, 1);
+        Destroy(gameObject, 0.5f);
     }
 
 }
