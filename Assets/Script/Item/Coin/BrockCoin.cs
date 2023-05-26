@@ -6,13 +6,14 @@ using UnityEngine;
 
 public class BrockCoin : MonoBehaviour
 {
-    private void Update()
+    private void Start()
     {
         Appear();
     }
+
     protected virtual void Appear()
     {
-        GameManager.Data.CurCoin += 1;
+        GameManager.Data.CurCoin ++;
         Destroy(gameObject, 0.5f);
     }
 }

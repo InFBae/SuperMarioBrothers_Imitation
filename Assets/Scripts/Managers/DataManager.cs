@@ -48,13 +48,18 @@ public class DataManager : MonoBehaviour
         }
     }
     [SerializeField] private int curCoin;
-    public UnityEvent<int> OnCurCoinChanged;
+    public event UnityAction<int> OnCurCoinChanged;
     public int CurCoin
     {
         get { return curCoin; }
         set
         {
-            OnCurCoinChanged?.Invoke(value);
+            Debug.Log("11");
+            if (curCoin != value)
+            {
+                OnCurCoinChanged?.Invoke(value);
+                curCoin = value;
+            }
             if (curCoin >= 100)
             {
                 life++;
