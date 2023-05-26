@@ -8,12 +8,12 @@ public class MarioStateController : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.Data.OnCurStateChanged.AddListener(ChangeState);
+        GameManager.Data.OnCurStateChanged += ChangeState;
     }
 
     private void OnDisable()
     {
-        GameManager.Data.OnCurStateChanged.RemoveListener(ChangeState);
+        GameManager.Data.OnCurStateChanged -= ChangeState;
     }
 
     public UnityAction OnHit;
@@ -61,17 +61,23 @@ public class MarioStateController : MonoBehaviour
     public MarioData marioData;
     private void UpdateSmallState()
     {
-        Instantiate(marioData.smallMario, this.transform.position, this.transform.rotation);
+        Transform currentPos = this.transform;
+        Destroy(this);
+        Instantiate(marioData.smallMario, currentPos.transform.position, currentPos.transform.rotation);       
     }
 
     private void UpdateBigState()
     {
-        Instantiate(marioData.bigMario, this.transform.position, this.transform.rotation);
+        Transform currentPos = this.transform;
+        Destroy(this);
+        Instantiate(marioData.bigMario, currentPos.transform.position, currentPos.transform.rotation);
     }
 
     private void UpdateFlowerState()
     {
-        Instantiate(marioData.flowerMario, this.transform.position, this.transform.rotation);
+        Transform currentPos = this.transform;
+        Destroy(this);
+        Instantiate(marioData.flowerMario, currentPos.transform.position, currentPos.transform.rotation);
     }
 
     private void UpdateStarmenState()

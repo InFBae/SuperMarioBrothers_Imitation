@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
 
+  - FireBall
   - Object
   - Ground
   - Monster
@@ -18,9 +19,13 @@ TagManager:
   - Water
   - UI
 
+  - 
+  - 
+
   - BackGround
   - Ground
   - Monster
+
 
   - 
   - 
