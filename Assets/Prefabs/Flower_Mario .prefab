@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6215855055936104124}
   - component: {fileID: 6215855055936104123}
+  - component: {fileID: 119768504625564477}
   m_Layer: 0
   m_Name: GroundChecker
   m_TagString: Untagged
@@ -58,6 +59,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &119768504625564477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215855055936104125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b80df8394583b43b62bc8a0427beec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
 --- !u!1 &6215855056696272405
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,6 +85,7 @@ GameObject:
   - component: {fileID: 6215855056696272403}
   - component: {fileID: 6215855056696272401}
   - component: {fileID: 6215855056696272400}
+  - component: {fileID: 4614751383930265502}
   - component: {fileID: 6215855056696272415}
   m_Layer: 0
   m_Name: 'Flower_Mario '
@@ -94,6 +109,7 @@ Transform:
   - {fileID: 6215855057093750964}
   - {fileID: 6215855057932500394}
   - {fileID: 6215855055936104124}
+  - {fileID: 410447782152745903}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -180,6 +196,20 @@ MonoBehaviour:
   maxSpeed: 7
   jumpPower: 12
   render: {fileID: 6215855057093750963}
+  isGround: 0
+--- !u!114 &4614751383930265502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215855056696272405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42cb467fbaf87a42bfb31326e5d5481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marioData: {fileID: 11400000, guid: 1417266b4ef20b54daa3129998c3fb6e, type: 2}
 --- !u!95 &6215855056696272415
 Animator:
   serializedVersion: 5
@@ -369,3 +399,63 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6215855057932500397}
   m_Enabled: 1
+--- !u!1 &7021247273658729651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410447782152745903}
+  - component: {fileID: 3189921467720406987}
+  - component: {fileID: 2042532347650888374}
+  m_Layer: 0
+  m_Name: HitChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &410447782152745903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7021247273658729651}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6215855056696272404}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &3189921467720406987
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7021247273658729651}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.6
+  m_Height: 1.9
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!114 &2042532347650888374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7021247273658729651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90cc64795e143a24983466f71be5d555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
