@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 6215855056696272400}
   - component: {fileID: 4614751383930265502}
   - component: {fileID: 6215855056696272415}
+  - component: {fileID: 6558702897277677868}
   m_Layer: 0
   m_Name: 'Flower_Mario '
   m_TagString: Player
@@ -110,6 +111,7 @@ Transform:
   - {fileID: 6215855057932500394}
   - {fileID: 6215855055936104124}
   - {fileID: 410447782152745903}
+  - {fileID: 7224923105674235255}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -231,6 +233,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6558702897277677868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215855056696272405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35d2081ac15c23458191576ea884f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPoint: {fileID: 8560640677572343806}
+  fireBall: {fileID: 632148764784284849, guid: a575094bc0d6b13478dd861c0db48222, type: 3}
 --- !u!1 &6215855057093750965
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,3 +475,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
+--- !u!1 &8560640677572343806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7224923105674235255}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7224923105674235255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8560640677572343806}
+  m_LocalRotation: {x: -0, y: -0, z: -0.23431654, w: 0.97216034}
+  m_LocalPosition: {x: 0.74, y: 0.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6215855056696272404}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -27.103}

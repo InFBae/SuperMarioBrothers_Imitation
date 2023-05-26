@@ -11,7 +11,7 @@ public class DataManager : MonoBehaviour
     [SerializeField] private int curState;
     [SerializeField] private int life;
 
-    public UnityEvent<int> OnCurStateChanged;
+    public event UnityAction<int> OnCurStateChanged;
 
     public int Life { get { return life; } set { life = value; } }
 
