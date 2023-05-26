@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flower : MonsterBase
+
+public class PirhanaPlant : MonsterBase
 {
 	[SerializeField] Transform[] patrolPoints;
 	int patrolIndex = 0;
