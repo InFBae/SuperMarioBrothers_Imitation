@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ca5163d0cfda74a988f53e36a1b0fc, type: 3}
+  m_Name: marioData
+  m_EditorClassIdentifier: 
+  smallMario: {fileID: 3985686656379801095, guid: 77afa38077eefea41a79e19488be9f99, type: 3}
+  bigMario: {fileID: 1684133311918487327, guid: 33912cf129f82b64e8830064c95ed960, type: 3}
+  flowerMario: {fileID: 6215855056696272405, guid: d44868da9e83eb54c89480f0219afd7a, type: 3}
